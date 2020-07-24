@@ -4,10 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                mvn clean
-                mvn install
-                mvn compile
-                mvn package
+                sh 'mvn clean'
+
             }
         }
         stage('Test') {
